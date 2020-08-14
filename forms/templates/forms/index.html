@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms!</title>
+</head>
+<body>
+<h1>BooleanForm</h1>
+<p>Model without any additional settings</p>
+<h2>Standard Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ boolean_form.as_p }}
+  <input type="submit" value="Submit" name="boolean_form">
+</form>
+<h2>Radio Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ radio_boolean_form.as_p }}
+  <input type="submit" value="Submit" name="radio_boolean_form">
+</form>
+<hr>
+
+<h1>Choices Form</h1>
+<p>Model with choices set</p>
+<h2>Standard Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ choices_form.as_p }}
+  <input type="submit" value="Submit" name="choices_form">
+</form>
+<h2>Radio Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ radio_choices_form.as_p }}
+  <input type="submit" value="Submit" name="radio_choices_form">
+</form>
+<hr>
+
+<h1>Default Form</h1>
+<p>Model with default set</p>
+<h2>Standard Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ default_form.as_p }}
+  <input type="submit" value="Submit" name="default_form">
+</form>
+<h2>Radio Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ radio_default_form.as_p }}
+  <input type="submit" value="Submit" name="radio_default_form">
+</form>
+<hr>
+
+<h1>Choices Default Form</h1>
+<p>Model with choices and default set</p>
+<h2>Standard Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ choices_default_form.as_p }}
+  <input type="submit" value="Submit" name="choices_default_form">
+</form>
+<h2>Radio Form</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ radio_choices_default_form.as_p }}
+  <input type="submit" value="Submit" name="radio_choices_default_form">
+</form>
+</body>
+</html>

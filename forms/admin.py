@@ -6,7 +6,16 @@ from django.contrib import admin
 
 from .models import Choices, ChoicesAndDefault, Boolean, Default
 
-admin.site.register(Choices)
+
+class ChoicesAdmin(admin.ModelAdmin):
+    pass
+
+
+class BooleanAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Choices, ChoicesAdmin)
 admin.site.register(ChoicesAndDefault)
-admin.site.register(Boolean)
+admin.site.register(Boolean, BooleanAdmin)
 admin.site.register(Default)
